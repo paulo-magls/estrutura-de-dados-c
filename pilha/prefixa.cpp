@@ -10,6 +10,8 @@
 // função strchr(): strchr("ABC", 'A') -> 1 || strchr("ABC", 'D') -> 0
 #include "pilha.h"
 
+
+// função que recebe uma expressão infixa e converte para prefixa
 char *prefixa(char *e){
 	static char s[513];
 	Pilha p = pilha(512);

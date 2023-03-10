@@ -5,6 +5,8 @@
 // função strchr(): strchr("ABC", 'A') -> 1 || strchr("ABC", 'D') -> 0
 #include "pilha.h"
 
+
+// função que recebe uma expressão infixa e converte para posfixa
 char *posfixa(char *e) {
 	static char s[256];
 	int j = 0;
