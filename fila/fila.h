@@ -1,5 +1,6 @@
 // fila.h - implementação dinâmica sequêncial de fila
 
+#include <stdio.h>
 #include <stdlib.h>
 
 #define avanca(i) (i = (i+1) % F->max)
@@ -15,12 +16,12 @@ typedef struct fila {
 } *Fila;
 
 Fila fila(int m) {
-   Fila F = malloc(sizeof(struct fila));
+   Fila F = (Fila) malloc(sizeof(struct fila));
    F->max    = m;
    F->total  = 0;
    F->inicio = 0;
    F->final  = 0; 
-   F->item   = malloc(m*sizeof(Itemf));
+   F->item   = (Itemf *) malloc(m*sizeof(Itemf));
    return F;
 }
 
